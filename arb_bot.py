@@ -44,7 +44,7 @@ ALERT_COOLDOWN_SECONDS = 600
 
 # 15 CEX (ccxt IDs) - inme se jo bhi tumhare region me kaam kare
 CEX_LIST = [
-    "binance", "kucoin", "okx", "bybit", "gateio",
+    "binance", "kucoin", "okx", "bybit", "gate",
     "mexc", "htx", "bitget", "kraken", "coinbase",
     "bingx", "poloniex", "lbank", "bitmart", "coinex",
 ]
@@ -122,8 +122,12 @@ def fetch_dex_price(symbol):
         return {}
 
     url = f"https://api.dexscreener.com/latest/dex/tokens/{token_address}"
+    headers = {"User-Agent": "Mozilla/5.0 (arb-bot)"}
     try:
-        resp = requests.get(url, timeout=10)
+        resp = requests.get(url, headers=headers, timeout=10)
+        if resp.status_code != 200:
+            print(f"[DexScreener HTTP {resp.status_code}] {symbol}: {resp.text[:150]}")
+            return {}
         data = resp.json()
         pairs = data.get("pairs") or []
         if not pairs:
