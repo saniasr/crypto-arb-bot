@@ -28,7 +28,7 @@ GAP_THRESHOLD_PERCENT = 8
 
 # Kitne second baad recheck kare (all-tokens scan thoda time leta hai,
 # isliye 5 min rakha hai - kam mat karo warna exchanges rate-limit kar denge)
-CHECK_INTERVAL_SECONDS = 300
+CHECK_INTERVAL_SECONDS = 600
 
 # Same alert baar baar na aaye isliye cooldown (seconds)
 ALERT_COOLDOWN_SECONDS = 900
