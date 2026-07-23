@@ -24,7 +24,7 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE")
 
 # Kitna % gap hone par alert bheje
-GAP_THRESHOLD_PERCENT = 0.5
+GAP_THRESHOLD_PERCENT = 8
 
 # Kitne second baad recheck kare (all-tokens scan thoda time leta hai,
 # isliye 5 min rakha hai - kam mat karo warna exchanges rate-limit kar denge)
