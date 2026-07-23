@@ -31,7 +31,7 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE")
 
 # Kitna % gap hone par alert bheje
-GAP_THRESHOLD_PERCENT = 1.0
+GAP_THRESHOLD_PERCENT = 0.05
 
 # Kaunse symbols track karne hain
 SYMBOLS = ["BTC/USDT", "ETH/USDT", "SOL/USDT", "BNB/USDT", "XRP/USDT"]
