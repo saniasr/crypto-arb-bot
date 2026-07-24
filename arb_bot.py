@@ -24,11 +24,11 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE")
 
 # Kitna % gap hone par alert bheje
-GAP_THRESHOLD_PERCENT = 0.5
+GAP_THRESHOLD_PERCENT = 8
 
 # Kitne second baad recheck kare (all-tokens scan thoda time leta hai,
 # isliye 5 min rakha hai - kam mat karo warna exchanges rate-limit kar denge)
-CHECK_INTERVAL_SECONDS = 300
+CHECK_INTERVAL_SECONDS = 600
 
 # Same alert baar baar na aaye isliye cooldown (seconds)
 ALERT_COOLDOWN_SECONDS = 900
@@ -47,7 +47,7 @@ MIN_24H_VOLUME_USD = 20_000
 MANUAL_EXCHANGE_MIN_VOLUME_USD = 150_000
 
 # Ek cycle me kitne top gaps Telegram pe bhejne hain (spam avoid karne ke liye)
-MAX_ALERTS_PER_CYCLE = 15
+MAX_ALERTS_PER_CYCLE = 25
 
 # FAKE ALERT PROTECTION:
 # Same ticker (e.g. "AI/USDT") kabhi-kabhi 2 alag exchanges pe bilkul
