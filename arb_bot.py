@@ -24,7 +24,7 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE")
 
 # Kitna % gap hone par alert bheje
-GAP_THRESHOLD_PERCENT = 0.3
+GAP_THRESHOLD_PERCENT = 2
 
 # Kitne second baad recheck kare (all-tokens scan thoda time leta hai,
 # isliye 5 min rakha hai - kam mat karo warna exchanges rate-limit kar denge)
@@ -44,7 +44,7 @@ MIN_24H_VOLUME_USD = 50_000
 # Manual exchanges (Biconomy/Coinstore/BTSE) ka volume calculation kam accurate
 # hota hai (estimate/approximation), isliye inke liye zyada strict threshold -
 # taaki thin/stale listings pass na ho paayein
-MANUAL_EXCHANGE_MIN_VOLUME_USD = 100_000
+MANUAL_EXCHANGE_MIN_VOLUME_USD = 50_000
 
 # Ek cycle me kitne top gaps Telegram pe bhejne hain (spam avoid karne ke liye)
 MAX_ALERTS_PER_CYCLE = 15
